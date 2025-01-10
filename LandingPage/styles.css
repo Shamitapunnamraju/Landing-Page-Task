@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta-button {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Features Section */
+#features {
+    padding: 20px;
+    background: #e2e2e2;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    #hero {
+        padding: 20px;
+    }
+}
