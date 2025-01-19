@@ -1,0 +1,103 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect for Main Links */
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu Styles */
+nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px 0;
+    display: none; /* Hidden by default */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li ul li {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    color: #fff;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li ul li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Show Dropdown on Hover */
+nav ul li:hover ul {
+    display: block; /* Show dropdown */
+    opacity: 1; /* Fade-in effect */
+    transform: translateY(0); /* Slide-down effect */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li ul {
+        position: static;
+        transform: translateY(0);
+        opacity: 1;
+        box-shadow: none;
+    }
+}
